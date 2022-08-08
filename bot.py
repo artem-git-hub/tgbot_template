@@ -7,7 +7,9 @@ from aiogram.contrib.fsm_storage.redis import RedisStorage2
 
 from tgbot.config import load_config
 from tgbot.filters.admin import AdminFilter
-from tgbot.handlers import register_admin, register_user, register_echo
+from tgbot.handlers.users.admin import register_admin
+from tgbot.handlers.users.echo import register_echo
+from tgbot.handlers.users.user import register_user
 from tgbot.middlewares.environment import EnvironmentMiddleware
 
 logger = logging.getLogger(__name__)
