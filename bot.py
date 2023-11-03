@@ -70,6 +70,9 @@ async def main():
 
     await set_default_commands(dp)
 
+    for admin_id in config.tg_bot.admin_ids:
+        await dp.bot.send_message(admin_id, "Бот запущен!")
+
     # start
     try:
         await dp.start_polling()
